@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/styles/typography.scss";
+:root {
+  --color-primary-blue: #40bfff;
+  --color-primary-red: #ff4858;
+  --color-secondary-light-blue: #bcddfe;
+  --color-secondary-dark: #22262a;
+  --color-secondary-neutral-dark: #223263;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}

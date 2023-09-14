@@ -4,7 +4,6 @@
 .bannerBackground{
   background-color: var(--color-primary-blue);
   height: 60rem;
-  position: relative;
 }
 .container {
   height: 100%;
@@ -14,11 +13,14 @@
   display: flex;
   justify-content: left;
   align-items: center;
+  padding-left: 11rem;
+  position: relative;
 }
 .bannerContent {
   color: white;
   font-family: "Poppins", sans-serif;
   width: 59.2rem;
+
 
   .contentDesc {
     margin-top: 2.3rem;
@@ -47,4 +49,24 @@
   top: -9rem;
   right: 0;
 }
+
+//@media screen and (max-width:767px) {
+//
+//
+//
+//}
+//
+//@media screen and (max-width:1024px) {
+//
+//
+//
+//}
+//
+//@media screen and (max-width:1499px) {
+//
+//
+//
+//}
+
+
 

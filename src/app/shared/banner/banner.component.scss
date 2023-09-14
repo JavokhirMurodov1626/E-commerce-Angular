@@ -1,0 +1,50 @@
+.banner {
+  padding-top: 9.2rem
+}
+.bannerBackground{
+  background-color: var(--color-primary-blue);
+  height: 60rem;
+  position: relative;
+}
+.container {
+  height: 100%;
+}
+.bannerBody {
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.bannerContent {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  width: 59.2rem;
+
+  .contentDesc {
+    margin-top: 2.3rem;
+    font-weight: normal;
+    font-size: 2.4rem;
+  }
+  .contentLinkBox {
+    margin-top: 1.2rem;
+    a {
+      color: white;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    .contentLinkUnderline {
+      width: 7.5rem;
+      height: 0.3rem;
+      background-color: white;
+    }
+  }
+}
+.bannerImg {
+  width: 79.4564rem;
+  height: 59.8935rem;
+  background: url('../../../assets/images/home/shoes-shoe-png-transparent-shoe-images-pluspng-17-1.webp');
+  position: absolute;
+  top: -9rem;
+  right: 0;
+}
+

@@ -63,50 +63,50 @@ p,
   font-weight: 400;
 }
 
-// @media screen and (max-width:767px) {
+@media screen and (max-width:767px) {
 
-//     p,
-//     .p {
-//         font-size: 16px;
-//     }
+    p,
+    .p {
+        font-size: 16px;
+    }
 
-// }
+}
 
-// @media screen and (max-width:1024px) {
+@media screen and (max-width:1024px) {
 
-//     h2,
-//     .h2 {
-//         font-weight: 600;
-//         font-size: 48px;
-//         line-height: 48px;
-//         letter-spacing: -1.4px;
-//     }
+    h2,
+    .h2 {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -1.4px;
+    }
 
-//     h3,
-//     .h3 {
+    h3,
+    .h3 {
 
-//         font-size: 32px;
-//         line-height: 40px;
-//         letter-spacing: -1.4px;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -1.4px;
 
-//     }
+    }
 
-// }
+}
 
-// @media screen and (max-width:767px) {
+@media screen and (max-width:767px) {
 
-//     h2,
-//     .h2 {
-//         letter-spacing: -1.4px;
-//         font-size: 36px;
-//         line-height: 42px;
-//     }
+    h2,
+    .h2 {
+        letter-spacing: -1.4px;
+        font-size: 36px;
+        line-height: 42px;
+    }
 
-//     h3,
-//     .h3 {
-//         font-size: 24px;
-//         line-height: 32px;
-//         letter-spacing: -1.4px;
-//     }
+    h3,
+    .h3 {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -1.4px;
+    }
 
-// }
+}

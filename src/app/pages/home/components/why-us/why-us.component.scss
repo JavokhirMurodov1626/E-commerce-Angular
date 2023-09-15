@@ -17,3 +17,27 @@
     font-weight: 500;
   }
 }
+
+@media screen and (max-width:1199px) {
+  .whyusBody {
+    padding: 0 10rem;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .whyusBody {
+    padding: 0 5rem;
+  }
+}
+
+@media screen and (max-width:767px) {
+
+  .whyus {
+    display: none;
+  }
+
+}
+
+
+
+

@@ -17,4 +17,4 @@ import { WhyUsComponent } from './components/why-us/why-us.component';
     HomeComponent,
   ]
 })
-export class HomeModule { }
+export class HomeModule {}

@@ -96,6 +96,25 @@
     }
   }
 
+  @media screen and (max-width: 768px) {
+    &-top,
+    &-middle {
+      flex-wrap: wrap;
+      gap: 20px;
+      &__item {
+        width: 40%;
 
-  
+        .logo,
+        h6 {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+
+  &-middle {
+    &__item {
+      width: 30%;
+    }
+  }
 }

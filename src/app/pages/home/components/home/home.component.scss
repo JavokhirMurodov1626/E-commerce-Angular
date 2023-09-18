@@ -57,8 +57,9 @@
     justify-content: flex-start;
     height: 3rem;
     width: 14rem;
-    flex-direction: row;
+    transform: translate(0rem , 16rem);
     margin: 1rem 0 1rem 2rem;
+    
     .sale{   
     color:#fb7181;
     width: 7rem;
@@ -108,7 +109,7 @@
     justify-content: flex-start;
     height: 3rem;
     width: 14rem;
-    flex-direction: row;
+    transform: translate(12rem , 19rem);
     margin: 1rem 0 1rem 2rem;
     .sale{   
     color:#fb7181;

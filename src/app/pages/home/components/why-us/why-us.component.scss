@@ -32,10 +32,12 @@
 
 @media screen and (max-width:767px) {
 
-  .whyus {
-    display: none;
+  .whyusBody {
+    flex-direction: column;
+    .whyusItem {
+      margin-bottom: 4rem;
+    }
   }
-
 }
 
 

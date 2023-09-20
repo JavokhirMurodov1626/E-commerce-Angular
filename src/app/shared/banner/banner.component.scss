@@ -42,9 +42,6 @@
   }
 }
 .bannerImg {
-  width: 79.4564rem;
-  height: 59.8935rem;
-  background: url('../../../assets/images/home/shoes-shoe-png-transparent-shoe-images-pluspng-17-1.webp');
   position: absolute;
   top: -9rem;
   right: 0;
@@ -65,11 +62,16 @@
     }
   }
   .bannerImg {
-    width: 55.6rem;
-    height: 42rem;
-    background-size: cover;
+    max-width: 70rem;
   }
+}
 
+@media screen and (max-width:1199px) {
+
+  .bannerImg {
+    top: -6rem;
+    max-width: 55rem;
+  }
 }
 
 @media screen and (max-width:1024px) {
@@ -98,9 +100,24 @@
 
 }
 @media screen and (max-width:767px) {
+  .bannerBackground {
+    height: 60rem
+  }
+  .bannerBody {
+    .bannerContent {
+      padding-bottom: 7rem;
+      text-align: center;
+    }
+  }
 
-  .banner {
-    display: none;
+}
+
+@media screen and (max-width:479px) {
+  .bannerBackground {
+    height: 57rem
+  }
+  .bannerImg {
+    top: -2rem;
   }
 
 }

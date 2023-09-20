@@ -1,0 +1,41 @@
+<section>
+  <div class="section-wrapper container">
+    <!-- section title -->
+    <h3>best seller</h3>
+
+    <!-- section navigation bar -->
+    <ul class="navigation-bar" *ngIf="categories.length>1">
+      <li
+        class="navigation-bar__item"
+        *ngFor="let item of categories; let i = index"
+      >
+        <input
+          [id]="item.id"
+          name="navigation-bar__item-link"
+          type="radio"
+          [checked]="i === 0"
+        />
+        <label [for]="item.id" (click)="fetchProductsHandler()" routerLink="" [queryParams]="{ category: item.category }">
+          {{ item.category }}
+        </label>
+      </li>
+    </ul>
+
+    <!-- section products grid container -->
+    <div class="products-grid">
+      <p class="products-placeholder" *ngIf="displayedProducts.length == 0">
+        there no products!
+      </p>
+
+      <div *ngIf="displayedProducts.length > 0" class="products-grid__container">
+        <app-product-card
+          *ngFor="let product of displayedProducts"
+          [product]="product"
+        ></app-product-card>
+      </div>
+    </div>
+
+    <!-- section action button -->
+    <a class="btn btn-load-more" *ngIf="showLoadMoreButton" (click)="loadMoreBtnHandler()">Load More</a>
+  </div>
+</section>

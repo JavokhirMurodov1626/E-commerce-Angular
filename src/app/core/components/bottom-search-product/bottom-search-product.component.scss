@@ -1,0 +1,47 @@
+.bottom_search-product {
+  padding: 8rem;
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-secondary-light-blue);
+    max-width: 633px;
+    border-radius: 4px;
+    margin: 0 auto;
+    input {
+      width: 100%;
+      outline: none;
+      color: var(--color-secondary-dark);
+      font-family: "Proxima-Nova", sans-serif;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      padding: 22px 20px 18px 20px;
+    }
+    button {
+      padding: 22px 20px 17px 20px;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      background-color: var(--color-primary-blue);
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    padding: 8rem 2rem;
+    form {
+      input {
+        font-size: 14px;
+        padding: 16px 10px;
+      }
+      button {
+        font-size: 14px;
+        padding: 18px 10px;
+      }
+    }
+  }
+}

@@ -12,6 +12,7 @@ const routes: Routes = [
       { path: 'products', component: ProductsGridComponent, },
     ],
   },
+  { path: 'cart', loadChildren: () => import('./pages/cart/cart.module').then(m => m.CartModule) },
 ];
 
 @NgModule({

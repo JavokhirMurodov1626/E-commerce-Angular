@@ -1,0 +1,96 @@
+.cart {
+  font-family: "Poppins", sans-serif;
+}
+.cartBox {
+  padding: 0 10rem;
+}
+.cartBoxTitle {
+  display: flex;
+  padding: 2rem 0;
+  border-bottom: solid 1px;
+  border-color: #e6e6e6;
+
+  h5 {
+    font-size: 2rem;
+    font-weight: 500;
+    padding-left: 10rem;
+  }
+  h5:nth-child(1) {
+    margin-right: auto;
+    padding-left: 0;
+  }
+}
+
+.cartItem {
+  padding: 2rem 0;
+  border-bottom: solid 1px;
+  border-color: #e6e6e6;
+  display: flex;
+  align-items: center;
+
+  .itemCancelBtn {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 0%;
+    margin-right: 4.5rem;
+    background-color: #ffd2d5;
+
+    i {
+      color: #FF4252;
+    }
+  }
+  .itemImg {
+    width: 14rem;
+    padding-right: 3rem;
+  }
+  .itemTitle {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  .itemPriceBox {
+    margin-left: auto;
+    display: flex;
+
+
+    .itemPrice {
+      font-size: 1.8rem;
+      font-weight: 400;
+      padding-right: 11.5rem;
+    }
+    .itemQuanty {
+      width: 13rem;
+      display: flex;
+      margin-right: 1rem;
+
+      button {
+        border:none;
+        border-radius: 0;
+        padding: 10px;
+
+        i {
+          color:#40bfff;
+        }
+      }
+      input {
+        width: 3rem;
+        padding: 0 10px;
+        border:none;
+        border-radius: 0;
+        background-color: #EFEFEF;
+      }
+      input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    }
+    .itemUnitPrice {
+      font-size: 1.8rem;
+      font-weight: 400;
+      padding-right: 6rem;
+    }
+  }
+}

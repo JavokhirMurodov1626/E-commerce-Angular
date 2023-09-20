@@ -1,0 +1,67 @@
+.product-box {
+    border-radius: 0.5rem;
+    .product-box__img-wrap{
+      height: 18rem;
+      img{
+          height: 100%;
+          border-radius: 5px 5px 0 0;
+      }
+    }
+    .product-box__content {
+      padding: 1.6rem 0;
+      border: 3px solid #f6f7f8;
+      border-top: none;
+      border-radius: 0 0 5px 5px;
+    }
+    .product-name {
+      color: var(--color-secondary-neutral-dark);
+      font-family: "Poppins";
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 150%;
+      letter-spacing: 0.5px;
+      text-align: center;
+      margin-bottom: 0.6rem;
+    }
+    .product-rating {
+      text-align: center;
+      margin-bottom: 0.5rem;
+     
+    }
+    .product-box__price-box {
+      display: flex;
+      gap: 1.8rem;
+      justify-content: center;
+      align-items: center;
+      .sale-price {
+        color: var(--color-primary-blue, #40bfff);
+        font-family: "Poppins";
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 180%;
+        letter-spacing: 0.5px;
+      }
+      .sale-price-box {
+        display: flex;
+        gap: 0.8rem;
+        .actual-price {
+          color: var(--neutral-grey, #9098b1);
+          font-family: "Poppins";
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 150%;
+          letter-spacing: 0.5px;
+          text-decoration: line-through;
+        }
+        .sale-percentage {
+          color: var(--primary-red, #fb7181);
+          font-family: "Poppins";
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 150%;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+  

@@ -1,4 +1,4 @@
-<div class="featured-product">
+<div class="featured-product" *ngIf="!errorMessage && !loading">
   <div class="container">
     <h4 class="featured-product__title">Featured Products</h4>
     <div class="featured-product__wrapper">
@@ -9,3 +9,6 @@
     </div>
   </div>
 </div>
+<span *ngIf="errorMessage && !loading" class="featured_product_error">
+  {{ errorMessage }}
+</span>

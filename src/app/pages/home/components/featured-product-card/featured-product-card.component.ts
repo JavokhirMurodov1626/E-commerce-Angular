@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IFeaturedProduct } from '../featured-products/featured-products.component';
+import { FeaturedProductModel } from 'src/app/shared/models/product.model';
 
 @Component({
   selector: 'app-featured-product-card',
@@ -8,7 +8,7 @@ import { IFeaturedProduct } from '../featured-products/featured-products.compone
 })
 export class FeaturedProductCardComponent {
   isImageLoad: boolean = false;
-  @Input() featuredProduct?: IFeaturedProduct;
+  @Input() featuredProduct?: FeaturedProductModel;
 
   numToEmptyArray(num: number) {
     return new Array(num).fill(',');

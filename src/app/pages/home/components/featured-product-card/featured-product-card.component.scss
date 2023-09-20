@@ -1,10 +1,11 @@
 .featured-product__item {
   display: flex;
+  cursor: pointer;
   gap: 25px;
   &__image {
     width: 100%;
     max-width: 152px;
-    height: 140px;
+    min-height: 140px;
     padding: 1rem;
     transition: 0.5s ease;
     filter: blur(10px) grayscale(100%);
@@ -74,6 +75,16 @@
       font-style: normal;
       font-weight: 500;
       font-family: "Poppins";
+
+      span {
+        color: #c1c8ce;
+        font-family: "Proxima-Nova";
+        text-decoration: line-through;
+      }
     }
+  }
+
+  @media screen and (max-width: 992px) {
+    gap: 15px;
   }
 }

@@ -1,18 +1,13 @@
 import { Component } from '@angular/core';
-export interface IFeaturedProduct {
-  image: string;
-  rating: number;
-  title: string;
-  price: number;
-  salePrice: number;
-}
+import { FeaturedProductModel } from 'src/app/shared/models/product.model';
+
 @Component({
   selector: 'app-featured-products',
   templateUrl: './featured-products.component.html',
   styleUrls: ['./featured-products.component.scss'],
 })
 export class FeaturedProductsComponent {
-  DUMMY_FEATURED_PRODUCT: IFeaturedProduct[] = [
+  DUMMY_FEATURED_PRODUCT: FeaturedProductModel[] = [
     {
       image:
         'https://media2.bulavka.uz/I44Y39wdujLMoKGZ16jrfPlYOL4=/fit-in/485x570/products/jUi8tw4wrL/input.jpeg',

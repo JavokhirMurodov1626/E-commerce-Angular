@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
-import { FeaturedProductModel } from '../models/product.model';
+import { FeaturedProductModel } from '../../../shared/models/product.model';
 
 @Injectable({
   providedIn: 'root',

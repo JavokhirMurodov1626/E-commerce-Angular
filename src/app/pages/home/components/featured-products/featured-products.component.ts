@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FeaturedProductModel } from 'src/app/shared/models/product.model';
-import { ProductService } from 'src/app/shared/services/product.service';
+import { ProductService } from 'src/app/pages/home/services/product.service';
 
 @Component({
   selector: 'app-featured-products',

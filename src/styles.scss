@@ -58,3 +58,11 @@ li {
   max-width: 1500px;
   margin: 0 auto;
 }
+
+.alert-error p:first-child {
+  font-size: 1.6rem !important;
+  margin-bottom: 0.8rem;
+}
+.alert-error .ng-toast.error {
+  padding: 1.6rem 1rem;
+}

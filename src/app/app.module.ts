@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgToastModule } from 'ng-angular-popup'
 
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
@@ -17,6 +18,7 @@ import { AppComponent } from './app.component';
     CoreModule,
     HomeModule,
     SharedModule,
+    NgToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

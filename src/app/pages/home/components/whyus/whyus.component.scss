@@ -1,0 +1,50 @@
+.whyus {
+  padding-top: 9.72rem;
+}
+.whyusBody {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rem;
+  .whyusItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 16rem;
+  }
+  .itemTitle {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+  }
+  .itemImg {
+    width: 7rem;
+  }
+  .itemImgShipping {
+    width: 10rem;
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .whyusBody {
+    padding: 0 10rem;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .whyusBody {
+    padding: 0 5rem;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .whyusBody {
+    flex-direction: column;
+    .whyusItem {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+
+
+

@@ -7,10 +7,11 @@ import { NgToastModule } from 'ng-angular-popup'
 import { HomeComponent } from './components/home/home.component';
 import { ProductsGridComponent } from './components/products-grid/products-grid.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { WhyusComponent } from './components/whyus/whyus.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, ProductsGridComponent],
+  declarations: [HomeComponent, ProductsGridComponent, WhyusComponent],
   imports: [CommonModule, SharedModule,HttpClientModule, AppRoutingModule, NgToastModule],
   exports: [HomeComponent],
 })

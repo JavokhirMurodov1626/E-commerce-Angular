@@ -1,0 +1,36 @@
+<div
+  class="featured-product__item {{ isImageLoad ? 'load-image' : '' }}"
+  *ngIf="featuredProduct"
+>
+  <div
+    class="featured-product__item__image"
+    style="
+      background: url('./assets/images/default-product-blur-image.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    "
+  >
+    <img
+      [src]="featuredProduct.image"
+      [alt]="featuredProduct.title"
+      loading="lazy"
+      (load)="imageLoad()"
+    />
+  </div>
+  <div class="featured-product__item__info">
+    <h5 class="featured-product__item__info__title">
+      {{ featuredProduct.title }}
+    </h5>
+    <div class="featured-product__item__info__stars">
+      <span
+        *ngFor="let sIndex of numToEmptyArray(5); let i = index"
+        [class]="featuredProduct.rating >= i ? 'active-star' : ''"
+      ></span>
+    </div>
+    <div class="featured-product__item__info__price">
+      {{ featuredProduct.salePrice | currency }}
+      <span>{{ featuredProduct.price | currency }}</span>
+    </div>
+  </div>
+</div>

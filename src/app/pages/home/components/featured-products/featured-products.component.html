@@ -1,1 +1,9 @@
-<p>featured-products works!</p>
+<div class="featured-product">
+  <div class="container">
+    <h4 class="featured-product__title">Featured Products</h4>
+    <app-featured-product-card
+      *ngFor="let featuredProduct of DUMMY_FEATURED_PRODUCT"
+      [featuredProduct]="featuredProduct"
+    />
+  </div>
+</div>

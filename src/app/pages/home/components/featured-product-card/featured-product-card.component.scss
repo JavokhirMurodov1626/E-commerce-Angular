@@ -1,0 +1,79 @@
+.featured-product__item {
+  display: flex;
+  gap: 25px;
+  &__image {
+    width: 100%;
+    max-width: 152px;
+    height: 140px;
+    padding: 1rem;
+    transition: 0.5s ease;
+    filter: blur(10px) grayscale(100%);
+    img {
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      transition: 0.5s ease;
+    }
+  }
+  &.load-image {
+    .featured-product__item__image {
+      filter: blur(0px) grayscale(0%);
+      background-image: none !important;
+      background-color: #f6f7f8 !important;
+
+      img {
+        opacity: 1;
+        background-color: #f6f7f8;
+      }
+    }
+  }
+
+  &__info {
+    &__title {
+      color: var(--color-secondary-dark);
+      font-family: "Proxima-Nova";
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      max-width: 249px;
+    }
+
+    &__stars {
+      display: flex;
+      align-items: center;
+      margin: 17px 0;
+      gap: 4px;
+      span {
+        width: 12px;
+        height: 12px;
+        background-color: #c1c8ce;
+        clip-path: polygon(
+          50% 0%,
+          61% 35%,
+          98% 35%,
+          68% 57%,
+          79% 91%,
+          50% 70%,
+          21% 91%,
+          32% 57%,
+          2% 35%,
+          39% 35%
+        );
+
+        &.active-star {
+          background-color: #ffc600;
+        }
+      }
+    }
+
+    &__price {
+      color: #ff4858;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      font-family: "Poppins";
+    }
+  }
+}

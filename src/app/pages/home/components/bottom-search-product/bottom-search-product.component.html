@@ -1,0 +1,6 @@
+<div class="bottom_search-product">
+  <form [formGroup]="searchForm" (submit)="searchProduct($event)">
+    <input type="text" placeholder="Search query" formControlName="search" />
+    <button type="submit" [disabled]="searchForm.invalid">Search</button>
+  </form>
+</div>

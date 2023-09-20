@@ -1,17 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { HttpClientModule } from  '@angular/common/http';
-import { NgToastModule } from 'ng-angular-popup'
+import { HttpClientModule } from '@angular/common/http';
+import { NgToastModule } from 'ng-angular-popup';
 
 import { HomeComponent } from './components/home/home.component';
 import { ProductsGridComponent } from './components/products-grid/products-grid.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
-
+import { BottomSearchProductComponent } from './components/bottom-search-product/bottom-search-product.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [HomeComponent, ProductsGridComponent],
-  imports: [CommonModule, SharedModule,HttpClientModule, AppRoutingModule, NgToastModule],
+  declarations: [
+    HomeComponent,
+    ProductsGridComponent,
+    BottomSearchProductComponent,
+  ],
+  imports: [
+    CommonModule,
+    SharedModule,
+    HttpClientModule,
+    AppRoutingModule,
+    NgToastModule,
+    ReactiveFormsModule,
+  ],
   exports: [HomeComponent],
 })
 export class HomeModule {}

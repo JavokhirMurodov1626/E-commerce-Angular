@@ -28,6 +28,10 @@
       font-weight: 600;
       background-color: var(--color-primary-blue);
       cursor: pointer;
+      &:disabled {
+        cursor: inherit;
+        opacity: 0.9;
+      }
     }
   }
 

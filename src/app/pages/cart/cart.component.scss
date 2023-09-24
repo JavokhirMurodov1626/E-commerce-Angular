@@ -39,6 +39,7 @@
     padding: 0;
     margin-right: 4.5rem;
     background-color: #ffd2d5;
+    cursor: pointer;
 
     i {
       color: #FF4252;
@@ -59,17 +60,17 @@
   .itemPriceBox {
     margin-left: auto;
     display: flex;
+    width: 40rem;
 
 
     .itemPrice {
       font-size: 1.8rem;
       font-weight: 400;
-      padding-right: 11rem;
+      width: 15rem;
     }
     .itemQuanty {
-      width: 13rem;
       display: flex;
-      margin-right: 1rem;
+      width: 15rem;
 
       button {
         border:none;
@@ -102,7 +103,6 @@
     .itemUnitPrice {
       font-size: 1.8rem;
       font-weight: 400;
-      padding-right: 6rem;
     }
   }
 }

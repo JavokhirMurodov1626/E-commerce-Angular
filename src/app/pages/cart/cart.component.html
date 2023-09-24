@@ -19,17 +19,17 @@
           <h5 class="itemTitle">Nike Airmax 270 react</h5>
 
           <div class="itemPriceBox">
-            <h5 class="itemPrice">$998</h5>
+            <h5 class="itemPrice">{{itemPrice | currency:'USD':'symbol':'1.0'}}</h5>
             <div class="itemQuanty">
-              <button class="itemQuantyMinusBtn">
+              <button class="itemQuantyMinusBtn" (click)="calculateUnitPrice('minus')">
                 <i class="fa-solid fa-minus"></i>
               </button>
-              <input type="number" value="1">
-              <button class="itemQuantyPlusBtn">
+              <input type="number" [(ngModel)]="itemQuanty">
+              <button class="itemQuantyPlusBtn" (click)="calculateUnitPrice('plus')">
                 <i class="fa-solid fa-plus"></i>
               </button>
             </div>
-            <h5 class="itemUnitPrice">$499</h5>
+            <h5 class="itemUnitPrice">{{itemUnitPrice | currency: 'USD':'symbol':'1.0'}}</h5>
           </div>
 
         </div>
@@ -45,22 +45,25 @@
 
           <div class="checkOutSubtotal checkOutTitle">
             <p>Subtotal</p>
-            <p>$980</p>
+            <p>{{itemUnitPrice | currency: 'USD':'symbol':'1.0'}}</p>
           </div>
 
           <div class="checkOutShippingFee checkOutTitle">
             <p>Shipping fee</p>
-            <p>$20</p>
+            <p>{{shippingFee | currency: 'USD':'symbol':'1.0'}}</p>
           </div>
 
           <div class="checkOutCoupon checkOutTitle">
             <p>Coupon</p>
-            <p>No</p>
+            <p *ngIf="(vaucherCode | json) != '{}'; else noCoupon">{{vaucherCode.first + '%'}}</p>
+            <ng-template #noCoupon>
+              <p>No</p>
+            </ng-template>
           </div>
 
           <div class="checkOutTotal">
             <p>TOTAL</p>
-            <p>$1000</p>
+            <p>{{checkOutTotal | currency: 'USD':'symbol':'1.0'}}</p>
           </div>
 
           <button class="checkOutBtn">Check Out</button>

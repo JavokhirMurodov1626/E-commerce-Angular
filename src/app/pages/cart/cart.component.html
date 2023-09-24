@@ -9,30 +9,32 @@
       </div>
 
       <div class="cartBoxItems">
-        <div class="cartItem">
-          <button class="itemCancelBtn">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-          <div class="itemImg">
-            <img src="assets/images/cart/Product Image (2).webp" alt="Product Photo">
-          </div>
-          <h5 class="itemTitle">Nike Airmax 270 react</h5>
-
-          <div class="itemPriceBox">
-            <h5 class="itemPrice">{{itemPrice | currency:'USD':'symbol':'1.0'}}</h5>
-            <div class="itemQuanty">
-              <button class="itemQuantyMinusBtn" (click)="calculateUnitPrice('minus')">
-                <i class="fa-solid fa-minus"></i>
-              </button>
-              <input type="number" [(ngModel)]="itemQuanty">
-              <button class="itemQuantyPlusBtn" (click)="calculateUnitPrice('plus')">
-                <i class="fa-solid fa-plus"></i>
-              </button>
+        <ng-container *ngFor="let cartProduct of cartProducts; let i = index">
+          <div class="cartItem">
+            <button class="itemCancelBtn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="itemImg">
+              <img src="{{cartProduct.images[0]}}" alt="Product Photo">
             </div>
-            <h5 class="itemUnitPrice">{{itemUnitPrice | currency: 'USD':'symbol':'1.0'}}</h5>
-          </div>
+            <h5 class="itemTitle">{{cartProduct.title}}</h5>
 
-        </div>
+            <div class="itemPriceBox">
+              <h5 class="itemPrice">{{cartProduct.price | currency:'USD':'symbol':'1.0'}}</h5>
+              <div class="itemQuanty">
+                <button class="itemQuantyMinusBtn" (click)="calculateUnitPrice('minus', i)">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <input type="number" [(ngModel)]="cartProduct.quantity">
+                <button class="itemQuantyPlusBtn" (click)="calculateUnitPrice('plus', i)">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+              <h5 class="itemUnitPrice" #unitPrice>{{cartProduct.price * cartProduct.quantity | currency: 'USD':'symbol':'1.0'}}</h5>
+            </div>
+
+          </div>
+        </ng-container>
       </div>
 
       <div class="boxVaucherWarapper">
@@ -45,7 +47,7 @@
 
           <div class="checkOutSubtotal checkOutTitle">
             <p>Subtotal</p>
-            <p>{{itemUnitPrice | currency: 'USD':'symbol':'1.0'}}</p>
+            <p>{{subtotal | currency: 'USD':'symbol':'1.0'}}</p>
           </div>
 
           <div class="checkOutShippingFee checkOutTitle">

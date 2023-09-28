@@ -39,8 +39,8 @@
 
       <div class="boxVaucherWarapper">
         <div class="boxVaucher">
-          <input type="text" placeholder="Vaucher code" class="vaucherInput">
-          <button>Redeem</button>
+          <input type="text" placeholder="Vaucher code" class="vaucherInput" [(ngModel)]="coupon">
+          <button [disabled]="!coupon" (click)="checkVaucherProcess(coupon)">Redeem</button>
         </div>
 
         <div class="boxCheckOut">
@@ -58,7 +58,7 @@
 
           <div class="checkOutCoupon checkOutTitle">
             <p>Coupon</p>
-            <p *ngIf="(vaucherCode | json) != '{}'; else noCoupon">{{vaucherCode.first + '%'}}</p>
+            <p>{{(vaucherCode | percent) ?? 'No'}}</p>
             <ng-template #noCoupon>
               <p>No</p>
             </ng-template>
@@ -66,7 +66,7 @@
 
           <div class="checkOutTotal">
             <p>TOTAL</p>
-            <p>{{checkOutTotal | currencyPipe}}</p>
+            <p>{{checkOutTotal | currency}}</p>
           </div>
 
           <button class="checkOutBtn">Check Out</button>

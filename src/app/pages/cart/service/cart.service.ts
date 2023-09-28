@@ -48,9 +48,22 @@ export class CartService {
     }
   ]
 
+  vaucherCodes = [
+    {
+      id: 1,
+      name: 'firstorder',
+      discount: 0.15
+    }
+  ]
+
+  checkVaucher(coupon: string) {
+    return this.vaucherCodes.find(vaucher => vaucher.name === coupon.toLowerCase())
+  }
+
   removeProduct(productId: number) {
     this.cartProducts = this.cartProducts.filter(p => p.id !== productId)
   }
 
   cartProducts$ = new BehaviorSubject<CartProductModel[]>(this.cartProducts)
+  vaucherCodes$ = new BehaviorSubject(this.vaucherCodes)
 }

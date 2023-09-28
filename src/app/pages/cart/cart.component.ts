@@ -10,7 +10,8 @@ import {Subject, takeUntil} from "rxjs";
 })
 export class CartComponent implements OnInit, OnDestroy{
   shippingFee: number = 2 // shipping fee
-  vaucherCode: any = {}
+  coupon: string = '';
+  vaucherCode: any; 
   cartProducts!: CartProductModel[];
   checkOutTotal!: number;
   subtotal!: number;
@@ -27,6 +28,7 @@ export class CartComponent implements OnInit, OnDestroy{
       .subscribe(cartProducts => {
         this.cartProducts = cartProducts
       })
+
     this.calculateUnitPrice()
   }
 
@@ -47,7 +49,13 @@ export class CartComponent implements OnInit, OnDestroy{
   }
   calculateTotal() {
     this.subtotal === 0 ? this.shippingFee = 0 : this.shippingFee
-    this.checkOutTotal = (this.subtotal * (1 - (this.vaucherCode.first ?? 0)/100)) + this.shippingFee
+    this.checkOutTotal = (this.subtotal * (1 - (this.vaucherCode ?? 0))) + this.shippingFee
+  }
+
+  checkVaucherProcess(coupon: string) {
+    this.vaucherCode = this.cartService.checkVaucher(coupon)?.discount
+    this.vaucherCode ? this.calculateUnitPrice() : alert('Yaroqsiz Vaucher')
+    this.coupon = ''
   }
 
   removeProductProcess(cartProduct: CartProductModel) {

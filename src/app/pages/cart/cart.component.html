@@ -1,0 +1,78 @@
+<section id="cart" class="cart">
+  <div class="container">
+    <div class="cartBox">
+      <div class="cartBoxTitle">
+        <h5>PRODUCT</h5>
+        <h5>PRICE</h5>
+        <h5>QTY</h5>
+        <h5>UNIT PRICE</h5>
+      </div>
+
+      <div class="cartBoxItems">
+        <ng-container *ngFor="let cartProduct of cartProducts; let i = index">
+          <div class="cartItem">
+            <button class="itemCancelBtn" (click)="removeProductProcess(cartProduct)">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="itemImg">
+              <img src="{{cartProduct.images[0]}}" alt="Product Photo">
+            </div>
+            <h5 class="itemTitle">{{cartProduct.title}}</h5>
+
+            <div class="itemPriceBox">
+              <h5 class="itemPrice">{{cartProduct.price | currencyPipe}}</h5>
+              <div class="itemQuanty">
+                <button class="itemQuantyMinusBtn" (click)="calculateUnitPrice('minus', i)">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <input type="number" [value]="Math.abs(cartProduct.quantity)">
+                <button class="itemQuantyPlusBtn" (click)="calculateUnitPrice('plus', i)">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+              <h5 class="itemUnitPrice" #unitPrice>{{cartProduct.price * cartProduct.quantity | currencyPipe}}</h5>
+            </div>
+
+          </div>
+        </ng-container>
+      </div>
+
+      <div class="boxVaucherWarapper">
+        <div class="boxVaucher">
+          <input type="text" placeholder="Vaucher code" class="vaucherInput" [(ngModel)]="coupon">
+          <button [disabled]="!coupon" (click)="checkVaucherProcess(coupon)">Apply</button>
+        </div>
+
+        <div class="boxCheckOut">
+
+          <div class="checkOutSubtotal checkOutTitle">
+            <p>Subtotal</p>
+            <p>{{subtotal | currencyPipe}}</p>
+          </div>
+
+          <div class="checkOutShippingFee checkOutTitle">
+            <p>Shipping fee</p>
+
+            <p>{{shippingFee | currencyPipe}}</p>
+          </div>
+
+          <div class="checkOutCoupon checkOutTitle">
+            <p>Coupon</p>
+            <p>{{(vaucherCode | percent) ?? 'No'}}</p>
+            <ng-template #noCoupon>
+              <p>No</p>
+            </ng-template>
+          </div>
+
+          <div class="checkOutTotal">
+            <p>TOTAL</p>
+            <p>{{checkOutTotal | currency}}</p>
+          </div>
+
+          <button class="checkOutBtn">Check Out</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

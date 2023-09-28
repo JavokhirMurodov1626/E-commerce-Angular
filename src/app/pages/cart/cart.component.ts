@@ -9,12 +9,14 @@ import {Subject, takeUntil} from "rxjs";
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit, OnDestroy{
-  shippingFee: number = 2
+  shippingFee: number = 2 // shipping fee
   vaucherCode: any = {}
   cartProducts!: CartProductModel[];
   checkOutTotal!: number;
   subtotal!: number;
   sub$ = new Subject()
+
+  protected readonly Math = Math;
 
   constructor(private cartService: CartService) {
   }
@@ -46,9 +48,9 @@ export class CartComponent implements OnInit, OnDestroy{
   calculateTotal() {
     this.checkOutTotal = (this.subtotal * (1 - (this.vaucherCode.first ?? 0)/100)) + this.shippingFee
   }
-
   ngOnDestroy() {
     this.sub$.next(null)
     this.sub$.complete()
   }
+
 }

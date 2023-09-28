@@ -56,6 +56,7 @@
   .itemTitle {
     font-size: 1.8rem;
     font-weight: 400;
+    max-width: 30rem;
   }
   .itemPriceBox {
     margin-left: auto;
@@ -174,6 +175,173 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .cartBox {
+    padding: 0 5rem;
+  }
+
+}
+
+@media screen and (max-width:1024px) {
+  .cartBox {
+    padding: 0 2.5rem;
+  }
+  .cartBoxTitle {
+    h5:last-child {
+      display: none;
+    }
+    h5:nth-child(3) {
+      padding-right: 11rem;
+    }
+  }
+  .cartItem {
+    .itemPriceBox {
+      width: auto;
+    }
+    .itemTitle {
+      font-size: 1.4rem;
+      max-width: 20rem;
+    }
+
+    .itemUnitPrice {
+      display: none;
+    }
+  }
+  .boxVaucherWarapper {
+    padding-left: 0;
+    padding-right: 0;
+
+    .boxVaucher {
+      padding-right: 1rem;
+    }
+    .boxCheckOut {
+      padding-left: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width:767px) {
+  .cartBoxTitle {
+    h5 {
+      display: none;
+    }
+    h5:first-child {
+      display: inline-block;
+      padding: 0;
+      color: #223263;
+      font-weight: 700;
+    }
+  }
+  .cartItem {
+    display: grid;
+    align-items: normal;
+    
+
+    .itemCancelBtn {
+      grid-column: 1/6;
+      grid-row: 1/4;
+      margin-left: auto;
+      margin-right: 0;
+      background-color: rgba(255, 255, 255, 0);
+    }
+    .itemImg {
+      padding-right: 1rem;
+      grid-column: 1/ 4;
+      grid-row: 2;
+      max-width: 10rem;
+      width: 100%;
+    }
+    .itemTitle {
+      font-size: 1.2rem;
+      font-weight: 700;
+      max-width: 20rem;
+      grid-column: 1/ 4;
+      grid-row: 1/4;
+      margin-left: 10rem;
+      color: #223263;
+    }
+    .itemPriceBox {
+      grid-column: 1/6;
+      grid-row: 2/2;
+      margin-left: 0;
+      margin-top: auto;
+      width: auto;
+      display: flex;
+      align-items: center;
+      padding-left: 10rem;
+
+
+      .itemPrice {
+        width: auto;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--color-primary-blue);
+
+        
+      }
+      .itemQuanty {
+        margin-left: auto;
+        width: auto;
+        button {
+          padding: 0.5rem
+        }
+      }
+    }
+  }
+  .boxVaucherWarapper {
+    flex-direction: column;
+    padding-top: 5rem;
+    max-width: 40rem;
+    margin: 0 auto;
+    
+    .boxVaucher {
+      margin-bottom: 3rem;
+      padding: 0;
+      width: 100%;
+      max-width: 40rem;
+
+      input {
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+      button {
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+    }
+
+    .boxCheckOut {
+      width: 100%;
+      
+      .checkOutSubtotal,
+      .checkOutCoupon,
+      .checkOutShippingFee {
+        p {
+          font-size: 1.2rem;
+          color: #223263;
+        }
+      }
+
+      .checkOutTotal {
+        p {
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: #223263;
+          
+        }
+        p:nth-child(2) {
+          color: var(--color-primary-blue)
+        }
+      }
+      button {
+        font-size: 1.2rem !important;
+      }
+
     }
   }
 }

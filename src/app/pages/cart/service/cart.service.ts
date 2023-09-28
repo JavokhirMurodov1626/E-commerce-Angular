@@ -30,7 +30,7 @@ export class CartService {
     },
     {
       id: 5,
-      title: 'Airmax 250 react',
+      title: 'Airmax 250 react super pro max edition',
       price: 5,
       salePrice: 499,
       discountPercentage: 15,

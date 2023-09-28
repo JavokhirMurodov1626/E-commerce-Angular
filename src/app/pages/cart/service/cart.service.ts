@@ -50,7 +50,6 @@ export class CartService {
 
   removeProduct(productId: number) {
     this.cartProducts = this.cartProducts.filter(p => p.id !== productId)
-    console.log(this.cartProducts)
   }
 
   cartProducts$ = new BehaviorSubject<CartProductModel[]>(this.cartProducts)

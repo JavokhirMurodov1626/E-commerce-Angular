@@ -20,7 +20,7 @@
             <h5 class="itemTitle">{{cartProduct.title}}</h5>
 
             <div class="itemPriceBox">
-              <h5 class="itemPrice">{{cartProduct.price | currency:'USD':'symbol':'1.0'}}</h5>
+              <h5 class="itemPrice">{{cartProduct.price | currencyPipe}}</h5>
               <div class="itemQuanty">
                 <button class="itemQuantyMinusBtn" (click)="calculateUnitPrice('minus', i)">
                   <i class="fa-solid fa-minus"></i>
@@ -30,7 +30,7 @@
                   <i class="fa-solid fa-plus"></i>
                 </button>
               </div>
-              <h5 class="itemUnitPrice" #unitPrice>{{cartProduct.price * cartProduct.quantity | currency: 'USD':'symbol':'1.0'}}</h5>
+              <h5 class="itemUnitPrice" #unitPrice>{{cartProduct.price * cartProduct.quantity | currencyPipe}}</h5>
             </div>
 
           </div>
@@ -47,12 +47,13 @@
 
           <div class="checkOutSubtotal checkOutTitle">
             <p>Subtotal</p>
-            <p>{{subtotal | currency: 'USD':'symbol':'1.0'}}</p>
+            <p>{{subtotal | currencyPipe}}</p>
           </div>
 
           <div class="checkOutShippingFee checkOutTitle">
             <p>Shipping fee</p>
-            <p>{{shippingFee | currency: 'USD':'symbol':'1.0'}}</p>
+
+            <p>{{shippingFee | currencyPipe}}</p>
           </div>
 
           <div class="checkOutCoupon checkOutTitle">
@@ -65,7 +66,7 @@
 
           <div class="checkOutTotal">
             <p>TOTAL</p>
-            <p>{{checkOutTotal | currency: 'USD':'symbol':'1.0'}}</p>
+            <p>{{checkOutTotal | currencyPipe}}</p>
           </div>
 
           <button class="checkOutBtn">Check Out</button>

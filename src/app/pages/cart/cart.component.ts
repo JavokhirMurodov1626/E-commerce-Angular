@@ -48,6 +48,12 @@ export class CartComponent implements OnInit, OnDestroy{
   calculateTotal() {
     this.checkOutTotal = (this.subtotal * (1 - (this.vaucherCode.first ?? 0)/100)) + this.shippingFee
   }
+
+  removeProductProcess(cartProduct: CartProductModel) {
+    this.cartProducts = this.cartProducts.filter((product) => product.id !== cartProduct.id)
+    this.cartService.removeProduct(cartProduct.id)
+  }
+
   ngOnDestroy() {
     this.sub$.next(null)
     this.sub$.complete()

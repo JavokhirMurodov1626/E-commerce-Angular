@@ -11,7 +11,7 @@
       <div class="cartBoxItems">
         <ng-container *ngFor="let cartProduct of cartProducts; let i = index">
           <div class="cartItem">
-            <button class="itemCancelBtn">
+            <button class="itemCancelBtn" (click)="removeProductProcess(cartProduct)">
               <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="itemImg">
